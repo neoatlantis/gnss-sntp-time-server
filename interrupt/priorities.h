@@ -1,0 +1,9 @@
+
+#ifndef _INTERRUPT_PRIORITIES_H    /* Guard against multiple inclusion */
+#define _INTERRUPT_PRIORITIES_H
+
+#define INTERRUPT_UART1RX_PRIORITY     4
+#define INTERRUPT_UART1RX_SUBPRIORITY  0
+#define INTERRUPT_UART1RX_IRQ   IPL4AUTO
+
+#endif
