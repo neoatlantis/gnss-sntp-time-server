@@ -23,7 +23,7 @@
 #include "customized_params.h"
 #include "sntp/sntp.h"
 
-#include "w5500_control.h"
+#include "time_broadcaster.h"
 
 
 
@@ -43,9 +43,7 @@ void main(void) {
     printf("NeoAtlantis GNSS Time Server\n\r");
     printf("-- Project YueChengLing\n\r");
     
-    w5500_init();
-    
-    NICUDPPacket udp_outgoing = { .bufferSize = 0 };
+    time_broadcaster_init();
     
     
     while(1){

@@ -1,5 +1,7 @@
 #include <xc.h>
+#include <stdbool.h>
 #include "priorities.h"
+
 
 void interrupt_uart1rx_init(){
     /*
@@ -50,6 +52,10 @@ void interrupt_int1_clear(){
 
 void interrupt_int1_disable(){
     IEC0bits.INT1IE = 0;
+}
+
+bool interrupt_int1_flag(){
+    return (bool) IFS0bits.INT1IF;
 }
 
 

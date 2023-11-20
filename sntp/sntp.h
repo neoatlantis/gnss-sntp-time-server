@@ -13,7 +13,6 @@ typedef union {
         uint8_t LSB;
     };
 } SNTP_DWORD;
-typedef SNTP_DWORD;
 
 #define SNTP_DWORD_FILL(t, value) \
     t.MSB = (value >> 24) & 0xFF;\
@@ -76,5 +75,6 @@ typedef union {
 #define SNTP_MESSAGE_OFFSET_TRANSMIT_TIMESTAMP  SNTP_MESSAGE_OFFSET_RECEIVE_TIMESTAMP + sizeof(SNTP_TIMESTAMP)
 
 
+void sntp_message_new_server_broadcast(SNTP_MESSAGE* msg);
 
 #endif

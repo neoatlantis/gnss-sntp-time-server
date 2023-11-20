@@ -29,7 +29,7 @@
       <itemPath>customized_params.h</itemPath>
       <itemPath>coretime.h</itemPath>
       <itemPath>sntp/sntp.h</itemPath>
-      <itemPath>w5500_control.h</itemPath>
+      <itemPath>time_broadcaster.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -59,7 +59,7 @@
       <itemPath>uart.c</itemPath>
       <itemPath>spi.c</itemPath>
       <itemPath>coretime.c</itemPath>
-      <itemPath>w5500_control.c</itemPath>
+      <itemPath>time_broadcaster.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
