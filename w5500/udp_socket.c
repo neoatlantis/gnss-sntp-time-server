@@ -215,6 +215,8 @@ uint16_t w5500_udp_socket_fill_txbuf(
         W5500_CTRL_BYTE_WR_SOCKET_TX(socket_n),
         txbuf_offset, udpp->bufferSize
     );
+    
+    return udpp->bufferSize;
 }
 
 uint16_t w5500_udp_socket_send_deferred_ready(NIC* nic, uint8_t socket_n, NICUDPPacket* udpp, bool override){

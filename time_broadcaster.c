@@ -58,6 +58,7 @@ void time_broadcaster_init(){
     w5500_open_udp_socket(&nic, 0, 123);
     
     printf("Preparing template SNTP broadcast message.\n\r");
+    for(size_t i=0; i<sizeof(sntpmsg); i++) sntpmsg.chars[i] = 0;
     sntp_message_new_server_broadcast(&sntpmsg);
     memcpy(&udpp.dst_addr.octet, &(uint8_t[4]){ BROADCAST_IP }, 4);
     udpp.dst_port.octetH = 0;
